@@ -1,0 +1,119 @@
+.Node {
+  height: 20px;
+  width: 20px;
+  outline: 1px solid #a3d2ca;
+  margin: auto;
+  display: inline-block;
+}
+.Node_Start {
+  border: 10px solid transparent;
+  border-left-color: #03506f;
+  outline: 0px;
+  width: 0px;
+  height: 0px;
+  transform: translate(+5px);
+}
+.Node_End {
+  background: #03506f;
+  border-radius: 100%;
+  outline: 0px;
+}
+.IsVisited {
+  animation-name: Visit;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.shortest-path-nodes {
+  animation-name: Short;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+@keyframes Short {
+  0% {
+    transform: scale(0.01);
+    border-radius: 5%;
+    background-color: #eb5e0b;
+  }
+  5% {
+    transform: scale(0.3);
+    border-radius: 50%;
+    background-color: #5eaaa8;
+  }
+  50% {
+    transform: scale(0.6);
+    background-color: #5eaaa8;
+  }
+
+  90% {
+    transform: scale(1);
+    background-color: #0a7eac;
+  }
+  95% {
+    transform: scale(1.1);
+    background-color: #0a7eac;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #0a7eac;
+  }
+}
+
+@keyframes Visit {
+  0% {
+    transform: scale(0.3);
+    border-radius: 50%;
+    background-color: #ffee07;
+  }
+  25% {
+    transform: scale(0.1);
+    border-radius: 50%;
+    background-color: #6edd14;
+  }
+  30% {
+    transform: scale(0.3);
+    border-radius: 50%;
+    background-color: #ffee07;
+  }
+  50% {
+    transform: scale(0.6);
+    background-color: #ecac22;
+  }
+  90% {
+    transform: scale(1);
+    background-color: #eb5e0b;
+  }
+  95% {
+    transform: scale(1.1);
+    background-color: #eb5e0b;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #eb5e0b;
+  }
+}
+
+.Wall {
+  background: linear-gradient(to bottom, white 50%, #65d6ce 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  transition: all 0.3s ease-out;
+}
+
+.Node_Start_F {
+  border: 10px solid transparent;
+  border-left-color: white;
+  outline: 0px;
+  width: 0px;
+  height: 0px;
+  transform: translate(+5px);
+}
